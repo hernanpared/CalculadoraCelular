@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Digital de Células</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-area">
+            <label>Leucocitos Totales: <input type="number" id="totalLeukocytes" value="0"></label>
+            <button id="resetButton">Reiniciar Todo</button>
+        </div>
+        <div class="count-section">
+            <!-- Ejemplo para N. Maduros -->
+            <div class="cell" id="nMaduros">
+                <img src="./img_/celula1.png" alt="N. Maduros">
+                <span class="count">0</span>
+                <button onclick="incrementCount('nMaduros')">N. Maduros</button>
+            </div>
+            <!-- Agrega más bloques aquí para cada tipo de célula -->
+            <div class="cell" id="nEncallados">
+                <img src="./img_/celula2.png" alt="N. Encallados">
+                <span class="count">0</span>
+                <button onclick="incrementCount('nEncallados')">N. Encallados</button>
+            </div>
+            <div class="cell" id="nToxicos">
+                <img src="./img_/celula3.jpg" alt="N. Tóxicos">
+                <span class="count">0</span>
+                <button onclick="incrementCount('nToxicos')">N. Tóxicos</button>
+            </div>
+            <div class="cell" id="linfocitos">
+                <img src="./img_/celula4.png" alt="Linfocitos">
+                <span class="count">0</span>
+                <button onclick="incrementCount('linfocitos')">Linfocitos</button>
+            </div>
+            <div class="cell" id="lReactivos">
+                <img src="./img_/celula5.png" alt="L. Reactivos">
+                <span class="count">0</span>
+                <button onclick="incrementCount('lReactivos')">L. Reactivos</button>
+            </div>
+            <div class="cell" id="eocinofilos">
+                <img src="./img_/celula6.png" alt="Eocinófilos">
+                <span class="count">0</span>
+                <button onclick="incrementCount('eocinofilos')">Eocinófilos</button>
+            </div>
+            <div class="cell" id="basofilos">
+                <img src="./img_/celula7.png" alt="Basófilos">
+                <span class="count">0</span>
+                <button onclick="incrementCount('basofilos')">Basófilos</button>
+            </div>
+            <div class="cell" id="monocitos">
+                <img src="./img_/celula8.png" alt="Monocitos">
+                <span class="count">0</span>
+                <button onclick="incrementCount('monocitos')">Monocitos</button>
+            </div>
+        </div>
+        <div class="percentage-section">
+            <!-- Repetir bloques similares para porcentajes de cada célula -->
+            <div class="cell" id="nMadurosPercentage">
+                <span>0%</span>
+                <p>Relativo</p>
+            </div>
+            <div class="cell" id="nEncalladosPercentage">
+                <span>0%</span>
+                <p>Relativo</p>
+            </div>
+            <div class="cell" id="nToxicosPercentage">
+                <span>0%</span>
+                <p>Relativo</p>
+            </div>
+            <div class="cell" id="linfocitosPercentage">
+                <span>0%</span>
+                <p>Relativo</p>
+            </div>
+            <div class="cell" id="lReactivossPercentage">
+                <span>0%</span>
+                <p>Relativo</p>
+            </div>
+            <div class="cell" id="eocinofilosPercentage">
+                <span>0%</span>
+                <p>Relativo</p>
+            </div>
+            <div class="cell" id="basofilosPercentage">
+                <span>0%</span>
+                <p>Relativo</p>
+            </div>
+            <div class="cell" id="monocitosPercentage">
+                <span>0%</span>
+                <p>Relativo</p>
+            </div>
+            
+            <!-- Otros porcentajes -->
+        </div>
+    </div>
+
+    <audio id="clickSound" src="./sonidos_/click.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.input-area label, .input-area button {
+    display: inline-block;
+    margin: 20px 5px;
+    font-size: 20px;
+}
+
+.count-section, .percentage-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cell {
+    margin: 10px;
+    text-align: center;
+}
+
+.cell img {
+    width: 50px;
+    height: auto;
+}
+
+.cell button, #resetButton {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cell button:hover, #resetButton:hover {
+    background-color: #45a049;
+}
+
+.cell span {
+    display: block;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .count-section, .percentage-section {
+        flex-direction: column;
+    }
+}

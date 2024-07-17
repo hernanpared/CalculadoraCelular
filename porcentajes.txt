@@ -1,0 +1,37 @@
+<div class="percentage-section">
+            <!-- Repetir bloques similares para porcentajes de cada célula -->
+            <div class="cell" id="nMadurosPercentage">
+                <span>0%</span>
+                <p>Relativo</p>
+            </div>
+            <div class="cell" id="nEncalladosPercentage">
+                <span>0%</span>
+                <p>Relativo</p>
+            </div>
+            <div class="cell" id="nToxicosPercentage">
+                <span>0%</span>
+                <p>Relativo</p>
+            </div>
+            <div class="cell" id="linfocitosPercentage">
+                <span>0%</span>
+                <p>Relativo</p>
+            </div>
+            <div class="cell" id="lReactivossPercentage">
+                <span>0%</span>
+                <p>Relativo</p>
+            </div>
+            <div class="cell" id="eocinofilosPercentage">
+                <span>0%</span>
+                <p>Relativo</p>
+            </div>
+            <div class="cell" id="basofilosPercentage">
+                <span>0%</span>
+                <p>Relativo</p>
+            </div>
+            <div class="cell" id="monocitosPercentage">
+                <span>0%</span>
+                <p>Relativo</p>
+            </div>
+        
+            <!-- Otros porcentajes -->
+        </div>

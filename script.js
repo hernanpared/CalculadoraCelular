@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const countSpan = this.previousElementSibling;
             let currentCount = parseInt(countSpan.textContent, 10);
             countSpan.textContent = ++currentCount;
-            updatePercentage(cellType);
+            updateTotalCount();
             document.getElementById('clickSound').play();
         });
     });
@@ -14,22 +14,25 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.count-section .cell span.count').forEach(span => {
             span.textContent = '0';
         });
-        document.querySelectorAll('.percentage-section .cell span').forEach(span => {
-            span.textContent = '0%';
+        document.querySelectorAll('.count-section .cell button').forEach(button => {
+            button.style.backgroundColor = '#4CAF50'; // Reset button color
+            button.disabled = false; // Enable buttons
         });
         document.getElementById('totalLeukocytes').value = '0';
     });
 });
 
-function updatePercentage(cellType) {
-    const totalLeukocytes = parseInt(document.getElementById('totalLeukocytes').value, 10);
-    const countSpan = document.querySelector(`#${cellType} .count`);
-    const count = parseInt(countSpan.textContent, 10);
-    const percentageSpan = document.querySelector(`#${cellType}Percentage span`);
-    if (totalLeukocytes > 0) {
-        const percentage = (count / totalLeukocytes) * 100;
-        percentageSpan.textContent = percentage.toFixed(2) + '%';
-    } else {
-        percentageSpan.textContent = '0%';
+function updateTotalCount() {
+    const totalSpecified = parseInt(document.getElementById('totalLeukocytes').value, 10);
+    let totalCurrent = 0;
+    document.querySelectorAll('.count-section .cell span.count').forEach(span => {
+        totalCurrent += parseInt(span.textContent, 10);
+    });
+    if (totalCurrent >= totalSpecified) {
+        document.getElementById('alarmSound').play();
+        document.querySelectorAll('.count-section .cell button').forEach(button => {
+            button.style.backgroundColor = 'red';
+            button.disabled = true;
+        });
     }
 }

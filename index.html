@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="input-area">
-            <label>Leucocitos Totales: <input type="number" id="totalLeukocytes" value="0"></label>
+            <label>Total a Contar: <input type="number" id="totalLeukocytes" value="0"></label>
             <button id="resetButton">Reiniciar Todo</button>
         </div>
         <div class="count-section">
@@ -56,46 +56,11 @@
                 <button onclick="incrementCount('monocitos')">Monocitos</button>
             </div>
         </div>
-        <div class="percentage-section">
-            <!-- Repetir bloques similares para porcentajes de cada célula -->
-            <div class="cell" id="nMadurosPercentage">
-                <span>0%</span>
-                <p>Relativo</p>
-            </div>
-            <div class="cell" id="nEncalladosPercentage">
-                <span>0%</span>
-                <p>Relativo</p>
-            </div>
-            <div class="cell" id="nToxicosPercentage">
-                <span>0%</span>
-                <p>Relativo</p>
-            </div>
-            <div class="cell" id="linfocitosPercentage">
-                <span>0%</span>
-                <p>Relativo</p>
-            </div>
-            <div class="cell" id="lReactivossPercentage">
-                <span>0%</span>
-                <p>Relativo</p>
-            </div>
-            <div class="cell" id="eocinofilosPercentage">
-                <span>0%</span>
-                <p>Relativo</p>
-            </div>
-            <div class="cell" id="basofilosPercentage">
-                <span>0%</span>
-                <p>Relativo</p>
-            </div>
-            <div class="cell" id="monocitosPercentage">
-                <span>0%</span>
-                <p>Relativo</p>
-            </div>
-            
-            <!-- Otros porcentajes -->
-        </div>
+    
     </div>
 
     <audio id="clickSound" src="./sonidos_/click.mp3"></audio>
+    <audio id="alarmSound" src="./sonidos_/caballo.mp3"></audio>
     <script src="script.js"></script>
 </body>
 </html>

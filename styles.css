@@ -41,6 +41,10 @@
     background-color: #45a049;
 }
 
+.cell button:disabled {
+    background-color: red; /* Deshabilitado muestra en rojo */
+}
+
 .cell span {
     display: block;
     font-size: 20px;

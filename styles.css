@@ -27,22 +27,33 @@
     height: auto;
 }
 
-.cell button, #resetButton {
+.cell button {
     padding: 10px;
     font-size: 16px;
     color: white;
-    background-color: #4CAF50;
+    background-color: #782AE2;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .cell button:hover {
-    background-color: #45a049;
+    background-color: #6e6180;
 }
+
+.cell button:active {
+    background-color: #181a18; /* Color más oscuro al presionar */
+}
+
 
 #resetButton{
     background-color: red;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .cell button:disabled {
@@ -55,8 +66,22 @@
     margin-top: 5px;
 }
 
+.cell .count {
+    background-color: #ffffff; /* Cambia a un color de fondo verde */
+    color: #000000; /* Texto blanco para contraste */
+    margin: 8px;
+    padding: 2px 3px; /* Ajusta el padding para hacerlo más rectangular */
+    min-width: 30px;
+    text-align: center; /* Centra el texto */
+    font-size: 16px; /* Asegura que el tamaño del texto sea adecuado */
+    line-height: 24px; /* Ajusta la altura de la línea para centrar verticalmente el texto */
+    border: 2px solid #000000; /* Añade un borde sólido negro */
+}
+
+
 @media (max-width: 768px) {
     .count-section, .percentage-section {
         flex-direction: column;
+        align-items: center;
     }
 }
